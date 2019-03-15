@@ -1,6 +1,6 @@
 import cv2
 from manager import WindowManager, CaptureManager
-#from main import OB
+from object_detection import detect_objects
 
 class start(object):
 
@@ -23,19 +23,20 @@ class start(object):
     def onKeypress(self, keycode):
         """Handle a keypress.
 
-        space  -> Take a screenshot.
-        tab    -> Start/stop recording a screencast.
-        escape -> Quit.
+        s -> Take a screenshot.
+        q -> Quit.
+        0 -> Detect objects.
 
         """
-        if keycode == 32: # space
+        if keycode == ord('s'): # space
             self._captureManager.writeImage('screenshot.png')
 
-        elif keycode == 27: # escape
+        elif keycode == ord('q'): # escape
             self._windowManager.destroyWindow()
 
-        #elif keycode == 111:
-            #OB.run(cv2.imread('screenshot.png'))
+        elif keycode == ord('o'):
+            temp = detect_objects()
+            temp.run_object_detection(img=cv2.imread('screenshot.png'))
 
         #elif keycode == 116:
             #tess.run()
