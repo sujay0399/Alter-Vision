@@ -1,7 +1,6 @@
 import cv2
 from manager import WindowManager, CaptureManager
 from object_detection import detect_objects
-import AgeAndGenderEstimation
 
 class start(object):
 
@@ -41,6 +40,7 @@ class start(object):
             temp.run_object_detection(img=cv2.imread('screenshot.png'))
 
         elif keycode == ord('a'):
+            import AgeAndGenderEstimation
             AgeAndGenderEstimation.run()
 
 
