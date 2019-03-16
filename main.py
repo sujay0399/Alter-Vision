@@ -27,6 +27,7 @@ class start(object):
         q -> Quit.
         0 -> Detect objects.
         a -> To estimate age and gender.
+        t -> To convert text from image to audio.
 
         """
         if keycode == ord('s'): # space
@@ -42,6 +43,10 @@ class start(object):
         elif keycode == ord('a'):
             import AgeAndGenderEstimation
             AgeAndGenderEstimation.run()
+
+        elif keycode == ord('t'):
+            import img2audio
+            img2audio.run()
 
 
 if __name__=="__main__":
