@@ -1,1 +1,0 @@
-The objects in the scene are person,cellphone,

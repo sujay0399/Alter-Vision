@@ -76,7 +76,7 @@ class detect_objects(object):
 
         file = "audio_new.mp3"
         os.system("mpg123 " + file)
-
+        open('test.txt', 'w').close()
 
 
     # cv2.imwrite("image_box_text.jpg",image)
