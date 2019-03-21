@@ -35,6 +35,7 @@ class detect_objects(object):
         with open('test.txt', 'r+') as f:
             f.write("The objects in the scene are "+class_names)
             f.close()
+        print("The objects in the scene are "+class_names)
 
     def run_object_detection(self, img):
     # Loading model
