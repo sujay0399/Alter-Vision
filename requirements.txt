@@ -25,7 +25,7 @@ matplotlib==3.0.3
 mock==2.0.0
 networkx==2.2
 numpy==1.16.2
-opencv-contrib-python==4.0.0.21
+opencv-contrib-python==4.1.1.26
 opencv-python==3.4.5.20
 pandas==0.24.2
 pbr==5.1.3
